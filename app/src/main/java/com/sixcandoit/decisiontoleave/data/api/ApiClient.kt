@@ -9,8 +9,11 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 
 object ApiClient {
-    private const val BASE_URL = "http://43.200.42.222/"
+    private const val BASE_URL = "http://43.200.42.222:3000/"
     private var retrofit: Retrofit? = null
+    private val json = Json {
+        ignoreUnknownKeys = true
+    }
 
     @OptIn(ExperimentalSerializationApi::class)
     fun getRetrofit(): Retrofit {
@@ -24,7 +27,7 @@ object ApiClient {
             retrofit = Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .client(client)
-                .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
+                .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
                 .build()
         }
         return retrofit!!

@@ -10,16 +10,135 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/decision_to_leave_beige"
         tools:context=".presentation.home.view.HomeActivity">
 
-        <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_text_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="61dp"
+            android:layout_marginEnd="99dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_current_name_home"
+                style="@style/TextAppearance.DecisionToLeave.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="정현규"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/tv_text_home"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_text_home"
+                style="@style/TextAppearance.DecisionToLeave.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="님과의 연애상태"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_current_name_home"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/iv_user_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/ic_goexlovers_home"
+            app:layout_constraintStart_toEndOf="@id/layout_text_home"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="99dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="99.5dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_text_home" />
+
+        <ImageView
+            android:id="@+id/iv_home"
+            android:layout_width="320dp"
+            android:layout_height="262dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_level2_home"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressbar_home"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="320dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="20dp"
+            android:progress="25"
+            android:progressBackgroundTint="@color/white"
+            android:progressTint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_home" />
+
+        <ImageView
+            android:id="@+id/iv_dot_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="31dp"
+            android:src="@drawable/ic_dot_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressbar_home" />
+
+        <ImageView
+            android:id="@+id/imgbtn_decision_home"
+            android:layout_width="320dp"
+            android:layout_height="108dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_decision_home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_dot_home" />
+
+        <ImageView
+            android:id="@+id/iv_goodbtn_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_goodbtn_home"
+            app:layout_constraintStart_toStartOf="@id/imgbtn_decision_home"
+            app:layout_constraintTop_toBottomOf="@id/imgbtn_decision_home" />
+
+        <ImageView
+            android:id="@+id/iv_badbtn_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_badbtn_home"
+            app:layout_constraintEnd_toEndOf="@id/imgbtn_decision_home"
+            app:layout_constraintStart_toEndOf="@+id/iv_goodbtn_home"
+            app:layout_constraintTop_toBottomOf="@+id/imgbtn_decision_home" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
