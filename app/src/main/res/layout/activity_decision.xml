@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -7,7 +8,227 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/decision_to_leave_beige">
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_go_back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/decision_title_decision"
+            android:layout_marginTop="28dp"
+            style="@style/TextAppearance.DecisionToLeave.Title" />
+
+        <ImageView
+            android:id="@+id/layout_ticket_decision"
+            android:layout_width="320dp"
+            android:layout_height="580dp"
+            android:src="@drawable/background_ticket_decision"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="85dp" />
+
+        <View
+            android:layout_width="262dp"
+            android:layout_height="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_profile_decision"
+            android:background="@color/decision_to_leave_gray"
+            android:layout_marginTop="26dp" />
+
+        <ImageView
+            android:id="@+id/iv_heart_decision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_heart"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="111dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="348dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/iv_heart_decision"
+            android:layout_marginStart="6dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="343dp"
+            android:text="Good"
+            style="@style/TextAppearance.DecisionToLeave.Body1"
+            android:textColor="@color/decision_to_leave_black" />
+
+        <ImageView
+            android:id="@+id/iv_broken_heart_decision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_broken_heart"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="111dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="375dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/iv_broken_heart_decision"
+            android:layout_marginStart="6dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="370dp"
+            android:text="Bad"
+            style="@style/TextAppearance.DecisionToLeave.Body1"
+            android:textColor="@color/decision_to_leave_black" />
+
+        <TextView
+            android:id="@+id/tv_good_point_decision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+13"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="343dp"
+            android:layout_marginEnd="96dp"
+            style="@style/TextAppearance.DecisionToLeave.Body1"
+            android:textColor="@color/decision_to_leave_black" />
+
+        <TextView
+            android:id="@+id/tv_bad_point_decision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-34"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="370dp"
+            android:layout_marginEnd="96dp"
+            style="@style/TextAppearance.DecisionToLeave.Body1"
+            android:textColor="@color/decision_to_leave_black" />
+
+        <View
+            android:layout_width="262dp"
+            android:layout_height="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_profile_decision"
+            android:background="@color/decision_to_leave_gray"
+            android:layout_marginTop="101dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="136dp"
+            android:layout_marginTop="418dp"
+            style="@style/TextAppearance.DecisionToLeave.Title"
+            android:textColor="@color/decision_to_leave_black" />
+
+        <TextView
+            android:id="@+id/tv_sum_point_decision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="-21"
+            android:layout_marginEnd="126dp"
+            android:layout_marginTop="418dp"
+            style="@style/TextAppearance.DecisionToLeave.Title"
+            android:textColor="@color/decision_to_leave_black" />
+
+
+        <View
+            android:layout_width="262dp"
+            android:layout_height="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_profile_decision"
+            android:background="@color/decision_to_leave_gray"
+            android:layout_marginTop="154dp" />
+
+        <ImageView
+            android:id="@+id/iv_profile_decision"
+            android:layout_width="198dp"
+            android:layout_height="176dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/layout_ticket_decision"
+            android:layout_marginTop="42dp"
+            android:src="@drawable/ic_lv3_decision" />
+
+        <TextView
+            android:id="@+id/tv_decide_name_decision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/iv_barcode"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/TextAppearance.DecisionToLeave.Body1"
+            android:textColor="@color/decision_to_leave_black"
+            android:layout_marginBottom="54dp"
+            android:layout_marginHorizontal="70dp"
+            android:text="남규현" />
+
+        <TextView
+            android:id="@+id/tv_decide_desc_decision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="님과 헤어질 결심이 드셨나요?"
+            app:layout_constraintTop_toBottomOf="@id/tv_decide_name_decision"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/TextAppearance.DecisionToLeave.Body1"
+            android:textColor="@color/decision_to_leave_black"
+            android:layout_marginBottom="54dp"
+            android:layout_marginHorizontal="70dp" />
+
+
+        <ImageView
+            android:id="@+id/iv_barcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/layout_ticket_decision"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/ic_barcode_decision"
+            android:layout_marginBottom="20dp" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/flow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="btn_maintain_decision, btn_end_decision"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_maintain_decision"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:background="@drawable/background_button_maintain_decision"
+            android:text="@string/decision_maintain_decision"
+            style="@style/TextAppearance.DecisionToLeave.Title"
+            android:textColor="@color/decision_to_leave_black" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_end_decision"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:background="@drawable/background_button_end_decision"
+            android:text="@string/decision_end_decision"
+            style="@style/TextAppearance.DecisionToLeave.Title"
+            android:textColor="@color/white" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

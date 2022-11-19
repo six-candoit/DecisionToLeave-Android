@@ -20,9 +20,6 @@
             android:name=".presentation.home.view.HomeActivity"
             android:exported="false"></activity>
         <activity
-            android:name=".presentation.decision.view.DecisionActivity"
-            android:exported="false" />
-        <activity
             android:name=".presentation.lover.view.LoverActivity"
             android:exported="false" />
         <activity
