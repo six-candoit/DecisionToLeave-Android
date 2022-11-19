@@ -1,13 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
+        <variable
+            name="type"
+            type="String" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_report">
+
+        <ImageView
+            android:id="@+id/iv_title_confirm_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="90dp"
+            android:layout_marginTop="42dp"
+            android:src="@drawable/ic_check"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_save_confirm_dialog"
+            style="@style/TextAppearance.DecisionToLeave.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="@string/save_success"
+            android:textColor="@color/decision_to_leave_black"
+            app:layout_constraintEnd_toEndOf="@id/iv_title_confirm_dialog"
+            app:layout_constraintStart_toStartOf="@id/iv_title_confirm_dialog"
+            app:layout_constraintTop_toBottomOf="@id/iv_title_confirm_dialog" />
+
+        <ImageView
+            android:id="@+id/iv_status_confirm_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:src='@{type.equals("0") ? @drawable/ic_bad_max : @drawable/ic_good_max}'
+            app:layout_constraintEnd_toStartOf="@id/tv_favor_confirm_dialog"
+            app:layout_constraintStart_toStartOf="@id/tv_save_confirm_dialog"
+            app:layout_constraintTop_toBottomOf="@id/tv_save_confirm_dialog"
+            tools:src="@drawable/ic_bad_max" />
+
+        <TextView
+            android:id="@+id/tv_favor_confirm_dialog"
+            style="@style/TextAppearance.DecisionToLeave.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/decision_to_leave_black"
+            app:layout_constraintBottom_toBottomOf="@id/iv_status_confirm_dialog"
+            app:layout_constraintEnd_toEndOf="@id/tv_save_confirm_dialog"
+            app:layout_constraintStart_toEndOf="@id/iv_status_confirm_dialog"
+            app:layout_constraintTop_toTopOf="@id/iv_status_confirm_dialog"
+            tools:text="-10" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_confirm_dialog"
+            style="@style/TextAppearance.DecisionToLeave.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@color/decision_to_leave_black"
+            android:text="@string/check_confirm_dialog"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_favor_confirm_dialog" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -18,9 +18,15 @@
         tools:targetApi="31">
         <activity
             android:name=".presentation.home.view.HomeActivity"
-            android:exported="true"></activity>
+            android:exported="false"></activity>
         <activity
-            android:name=".presentation.decision.view.DecisionActivity"
+            android:name=".presentation.lover.view.LoverActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.exlovers.view.ExLoversActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.splash.view.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,12 +34,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".presentation.lover.view.LoverActivity"
-            android:exported="false" />
-        <activity
-            android:name=".presentation.exlovers.view.ExLoversActivity"
-            android:exported="false" />
     </application>
 
 </manifest>
