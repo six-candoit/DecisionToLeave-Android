@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">DecisionToLeave</string>
+    <string name="save_lover">저장하기</string>
+    <string name="bad_description_lover">남규현님께 얼마나 나쁜 감정이 들었나요?</string>
+    <string name="input_report">텍스트 입력하기</string>
+    <string name="good">Good</string>
+    <string name="bad">Bad</string>
+    <string name="save_success">저장되었습니다</string>
+    <string name="check_confirm_dialog">확인</string>
 </resources>

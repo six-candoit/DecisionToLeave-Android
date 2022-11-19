@@ -1,13 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
+        <variable
+            name="type"
+            type="String" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/decision_to_leave_beige">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tb_lover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/decision_to_leave_beige"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_back">
+
+            <TextView
+                style="@style/TextAppearance.DecisionToLeave.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text='@{type.equals("0") ? @string/good : @string/bad}'
+                android:textColor="@color/decision_to_leave_black"
+                tools:text="Good" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_favor_lover"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tb_lover">
+
+            <TextView
+                android:id="@+id/tv_title_lover"
+                style="@style/TextAppearance.DecisionToLeave.Body2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="@string/bad_description_lover"
+                android:textColor="@color/decision_to_leave_black"
+                app:layout_constraintBottom_toTopOf="@id/sb_favor_lover"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_min_favor_lover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:src="@drawable/ic_report_min"
+                app:layout_constraintBottom_toBottomOf="@id/sb_favor_lover"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/sb_favor_lover" />
+
+            <ImageView
+                android:id="@+id/iv_max_favor_lover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="28dp"
+                android:src='@{type.equals("0") ? @drawable/ic_bad_max : @drawable/ic_good_max}'
+                app:layout_constraintBottom_toBottomOf="@id/sb_favor_lover"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/sb_favor_lover"
+                tools:src="@drawable/ic_bad_max" />
+
+            <SeekBar
+                android:id="@+id/sb_favor_lover"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="23dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="27dp"
+                android:max="100"
+                android:maxHeight="7dp"
+                android:minHeight="7dp"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:progress="40"
+                android:progressBackgroundTint="@color/decision_to_leave_black"
+                android:progressDrawable="@drawable/background_seekbar_lover"
+                android:progressTint="@color/decision_to_leave_black"
+                android:thumb="@drawable/background_seekbar_thumb_lover"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/iv_max_favor_lover"
+                app:layout_constraintStart_toEndOf="@id/iv_min_favor_lover"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_lover" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_lover"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="15dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:background="@color/decision_to_leave_beige"
+            app:layout_constraintBottom_toTopOf="@id/btn_save_lover"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_favor_lover"
+            tools:listitem="@layout/item_report" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_save_lover"
+            style="@style/TextAppearance.DecisionToLeave.Title"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:background="@color/decision_to_leave_gray"
+            android:enabled="false"
+            android:text="@string/save_lover"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
