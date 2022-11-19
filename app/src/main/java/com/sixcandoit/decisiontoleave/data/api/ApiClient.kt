@@ -9,7 +9,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 
 object ApiClient {
-    private const val BASE_URL = "http://43.200.42.222/"
+    private const val BASE_URL = "http://43.200.42.222:3000/"
     private var retrofit: Retrofit? = null
 
     @OptIn(ExperimentalSerializationApi::class)
