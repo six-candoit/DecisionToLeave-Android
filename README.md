@@ -71,3 +71,8 @@ feature/{화면}
 ## 시연 영상 제출
 
 - 1분 이내의 시연영상을 촬영해주시고 리드미에 부착해주세요
+
+
+https://user-images.githubusercontent.com/108331578/202875643-dd353921-f8b4-41c4-bc80-a7383623fd00.mp4
+
+
