@@ -18,6 +18,8 @@
 무슨 상관이세요. 당신은 세상에서 가장 소중한 사람입니다.
 
 ## 안드로이드 개발팀 단체사진과 전체 팀 단체 사진
+![KakaoTalk_Photo_2022-11-20-01-28-29](https://user-images.githubusercontent.com/108331578/202861289-0bf63d74-ced1-405c-a74d-4e74b7d81efc.jpeg)
+![KakaoTalk_Photo_2022-11-20-01-28-36](https://user-images.githubusercontent.com/108331578/202861294-cf15516f-0c38-4306-8c18-8ca084a63804.jpeg)
 
 ## 개발 역할 담당
 - 홈 화면(HomeActivity) : 고아라
