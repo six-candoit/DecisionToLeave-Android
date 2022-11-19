@@ -18,6 +18,9 @@
         tools:targetApi="31">
         <activity
             android:name=".presentation.home.view.HomeActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".presentation.decision.view.DecisionActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,9 +28,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".presentation.decision.view.DecisionActivity"
-            android:exported="false" />
         <activity
             android:name=".presentation.lover.view.LoverActivity"
             android:exported="false" />

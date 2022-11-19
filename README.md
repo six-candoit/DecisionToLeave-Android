@@ -46,13 +46,26 @@ develop → default
 
 feature/{화면}
 ### 네이밍
-- fragment, activity → “명사 or 동사 or 형용사”  + UI 컨트롤러
-ex) HomeFragment, MainActivity
-- xml → {widget or layout 줄임말}_{    }_{화면 이름}
-ex) et_search_home
-- drawable
-아이콘 → ic_ {   }
-백그라운드 → background_{   }
-셀렉터 → selector_{ }
+- fragment, activity → “명사 or 동사 or 형용사” + UI 컨트롤러
+  ex) HomeFragment, MainActivity
+- xml → {widget or layout 줄임말}_{ }_{화면 이름} ex) et_search_home
+- drawable 아이콘 → ic_ { } 백그라운드 → background_{ } 셀렉터 → selector_{ }
 
 # 2차과제
+
+## README 제출
+
+- 1차과제에 더하여 솝커톤을 진행하면서 구현하기 어려웠던 것에 대한 문제정의와 이에 대한 해결방안을 적는다.
+
+구현하기 어려웠던 것 : 뷰 모델에 대한 이해가 부족한 상태에서 시도했던 것 해결방안 : 뷰 모델을 정확히 이해하고 사용할 것 구현하기 어려웠던 것 : 서버에 API 수정을 여러
+번 요청했던 것 해결방안 : 정확한 뷰가 정해지고 나서 API를 요청하기
+
+## 프로젝트 제출
+
+## APK 제출
+
+- APK는 디버그 모드로 빌드해주시고 이를 제출해주세요
+
+## 시연 영상 제출
+
+- 1분 이내의 시연영상을 촬영해주시고 리드미에 부착해주세요

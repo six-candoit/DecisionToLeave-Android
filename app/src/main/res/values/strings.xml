@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">DecisionToLeave</string>
+    <string name="decision_maintain_decision">연애 유지</string>
+    <string name="decision_end_decision">연애 종료</string>
+    <string name="decision_title_decision">헤어질 결심</string>
 </resources>
